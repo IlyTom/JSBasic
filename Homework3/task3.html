@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Task3
+        //Пользователь с клавиатуры вводит 3 числа, необходимо создать функцию, которая определяет максимальное значение среди этих чисел
+        function findMaximum(num1, num2, num3){
+            let maxNum = Math.max(num1, num2, num3)
+            console.log(`Максимальное число ${maxNum}`);  
+        }
+
+        let num1 = prompt('Введите первое число');
+        let num2 = prompt('Введите второе число');
+        let num3 = prompt('Введите третье число');
+        if (isNaN(num1) || isNaN(num2) || isNaN(num3)){
+            console.log('Значения заданы неверно');
+        }
+        else{
+            findMaximum(num1, num2, num3); 
+        }
+        console.log(`num1 = ${num1}, num2 = ${num2}, num3 = ${num3}`);
+        
+    </script>
+</body>
+</html>
