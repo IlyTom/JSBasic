@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //task3
+        /*Используя Math.random() вам необходимо генерировать цифры от 0 до 9, и создать массив состоящий из 5 таких элементов
+        1. Рассчитать сумму элементов этого массива
+        2. Найти минимальное число
+        3. Найти есть ли в этом массиве число 3*/
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+        function createArray(numItems) {
+            let arr = [];
+            for (let i = 0; i < numItems; i++) {
+                arr[i] = getRandomInt(0, 10);
+            }
+            return arr;
+        }
+        function sumElementArray(array) {
+            let sum = 0;
+            for (let i = 0; i < array.length; i++) {
+                sum += array[i];
+            }
+            return sum;
+        }
+        function findElement(array, item) {
+            if (array.includes(item)) {
+                console.log(`Элемент ${item} есть в массиве!`);
+            }
+            else console.log(`Элементa ${item} нет в массиве!`);
+        }
+
+
+        let array = createArray(5);
+        console.log(array);
+
+        console.log(`Сумма элементов массива = ${sumElementArray(array)}`);
+        console.log(`Минимальный элемент массива это ${Math.min(...array)}`);
+        findElement(array, 3);
+        
+
+
+    </script>
+</body>
+
+</html>
